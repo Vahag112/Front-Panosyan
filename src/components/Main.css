@@ -88,6 +88,7 @@ main {
   height: auto;
   gap: 20px;
   position: relative;
+  border-radius: 8px;
 
   img{
     width: 100%;
