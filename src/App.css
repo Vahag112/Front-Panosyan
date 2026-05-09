@@ -1,0 +1,14 @@
+.container{
+    max-width: 1160px;
+    min-width: 335px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+
+@font-face {
+    font-family: roboto;
+    src: url('./fonts/Roboto-VariableFont_wdth\,wght.ttf');
+}
+
+

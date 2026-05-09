@@ -1,0 +1,119 @@
+header {
+    display: flex;
+    align-items: center;
+    padding-top: 29px;
+    padding-bottom: 1.593rem;
+    z-index: 987;
+    flex-direction: column; 
+    
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        
+        .search {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        
+        .searchBox {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(-15px);
+            pointer-events: none;
+            top: 10px;
+            right: 30px;
+            transition: all 0.35s ease;
+            display: flex;
+            align-items: center;
+            /* gap: 5px; */
+            
+            button{
+                padding: 5px 5px;
+                border-radius: 0 5px 5px 0;
+                border: 2px solid #E9E9E9;
+                background: #E9E9E9;
+                cursor: pointer;
+                color: rgb(103, 101, 101);
+            }
+            
+            input {
+                border: 2px solid #E9E9E9;
+                transition: all 0.6s ease;
+                padding: 5px 5px;
+                width: 10rem;
+                border-radius:5px 0 0 5px ;
+                
+            }
+            
+            input:focus {
+                border: 2px solid gray;
+            }
+            
+            
+            
+        }
+        
+        .searchBox.open {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+    
+        }
+        
+    }
+    
+}
+
+
+.bars{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+    display: none;
+}
+
+
+@media(max-width:1180px){
+    header{
+        padding-inline: 10px;
+    }
+}
+
+
+@media(max-width:771px){
+header > .container > .searchBox{
+        top: 1.6rem ;
+        right: 1rem ;
+         input{
+            width: 8rem;
+         }
+         button{
+            padding-inline:3px ;
+
+         }
+    }
+}
+
+@media(max-width:660px){
+  .bars{
+    display: flex;
+  }
+
+  header > .container > .searchBox{
+        top: 2.3rem ;
+        right: 0 ;
+
+        input{
+            width: 8rem;
+        }
+    }
+}
